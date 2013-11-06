@@ -92,15 +92,17 @@ $id = $row[0]; ?>
 <td width="2%"><?php echo $i;?></td>
 <td>
 <a href="<?php echo $root;?>&amp;act=view&amp;id=
-<?php echo $id;?>"
+<?php echo $id;?>"/
 title="Lihat Data"><?php echo $id;?></a>
 </td>
 <td><?php echo $row[1];?></td>
 <td><?php echo $row[2]?></td>
 <td align="center">
 | <a href="<?php echo $root;?>&amp;act=edit&amp;id=<?php echo $id;?>">Edit</a> 
-|| <a href="<?php echo $root;?>&amp;act=del&amp;id=<?php echo $id;?>">Hapus</a> |
+|
  
+<a href=<?php echo $root;?>&amp;act=del&amp;id=<?php echo $id;?> onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"">Hapus</a>
+
  
 </td>
 </tr>
